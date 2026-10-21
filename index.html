@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gurkirat Singh | Software Developer</title>
+    <meta name="description" content="Gurkirat Singh - 3rd-year Applied Computer Science student at the University of Winnipeg building full-stack web applications with JavaScript, TypeScript, Node.js, C#/.NET, Java and SQL.">
+    <meta name="author" content="Gurkirat Singh">
+
+    <meta property="og:title" content="Gurkirat Singh | Software Developer">
+    <meta property="og:description" content="Applied CS student at UWinnipeg building full-stack web applications and databases.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23111'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='bold' fill='%23bfffff' text-anchor='middle'>GS</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Applies saved theme before the page paints (prevents a white flash in dark mode) -->
+    <script>
+        try {
+            const t = localStorage.getItem("theme") ||
+                (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Mobile top bar (only visible on small screens) -->
+    <header class="topbar">
+        <a href="#top" class="topbar-name">Gurkirat Singh</a>
+        <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <div class="overlay"></div>
+
+    <!-- Sidebar navigation -->
+    <nav class="sidebar" id="sidebar" aria-label="Main navigation">
+        <a href="#top" class="profile">
+            <img src="Photos/photo2.jpg" alt="Photo of Gurkirat Singh" class="profile-photo">
+        </a>
+        <p class="sidebar-name">Gurkirat Singh</p>
+        <p class="sidebar-role">Applied CS @ UWinnipeg</p>
+
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#ideas" class="nav-link">Ideas</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon-moon">☾</span>
+            <span class="icon-sun">☀</span>
+            <span class="theme-label">Dark mode</span>
+        </button>
+
+        <div class="socials">
+            <a href="https://github.com/GurkiratSingh3630" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/gurkirat-singh-113761306" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+        </div>
+    </nav>
+
+    <main id="top">
+
+        <!-- Greeting bar -->
+        <div class="greeting">
+            <h2 class="greeting-text" id="greeting-text">Hi there!</h2>
+            <div id="datetime"></div>
+        </div>
+
+        <!-- Hero with typewriter -->
+        <section class="hero" title="Click to skip">
+            <h1 class="hero-title">I'm <span id="typed">Gurkirat</span><span class="cursor" aria-hidden="true"></span></h1>
+            <p class="hero-sub">3rd-year Applied Computer Science student at the University of Winnipeg</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View my work</a>
+                <a href="CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
+            </div>
+            <p class="hero-hint">click the title to skip</p>
+        </section>
+
+        <!-- About -->
+        <section class="section reveal" id="about">
+            <div class="section-label">About</div>
+            <p class="intro">
+                I build full-stack web applications and design the databases behind them,
+                from REST APIs and server-side logic to clean, responsive interfaces.
+            </p>
+            <p class="intro-small">
+                I'm an Applied Computer Science student at the University of Winnipeg, graduating in April 2027.
+                My coursework in software design, advanced internet programming, database systems, and data
+                structures and algorithms shows up in everything I build. I care about writing code that's easy
+                to debug and maintain, and I enjoy working in agile teams with Git, Jira and CI/CD workflows.
+            </p>
+            <p class="intro-small">
+                Outside of class, I serve as Treasurer of the Applied Computer Science Students' Association,
+                and I've taught programming to students who were writing their first lines of C and C++.
+            </p>
+
+            <h3 class="skills-heading">Languages and frameworks</h3>
+            <div class="skills">
+                <span class="tag">JavaScript</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Java</span>
+                <span class="tag">C# / .NET</span>
+                <span class="tag">Python</span>
+                <span class="tag">C</span>
+                <span class="tag">C++</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+            </div>
+
+            <h3 class="skills-heading">Web and databases</h3>
+            <div class="skills">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express.js</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Microservices</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">DB2</span>
+            </div>
+
+            <h3 class="skills-heading">Tools and practices</h3>
+            <div class="skills">
+                <span class="tag">Git and GitHub</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Automated testing</span>
+                <span class="tag">OOP design</span>
+                <span class="tag">Jira</span>
+                <span class="tag">Confluence</span>
+                <span class="tag">VS Code</span>
+                <span class="tag">Visual Studio</span>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section reveal" id="projects">
+            <div class="section-label">Craft</div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <a href="https://github.com/GurkiratSingh3630/SinghAuto" target="_blank" rel="noopener" class="thumbnail">
+                        <img src="images/Logo.png" alt="Singh Auto logo">
+                    </a>
+                    <div class="project-body">
+                        <h3>Singh Auto</h3>
+                        <p>A full-stack automotive service app with sign-up and login, service booking and an admin dashboard. Includes REST endpoints, a price-estimate API, file uploads, server-sent events for live updates, and 404/500 error logging for faster troubleshooting.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-sm">Node.js</span>
+                            <span class="tag tag-sm">Express</span>
+                            <span class="tag tag-sm">MongoDB</span>
+                            <span class="tag tag-sm">Pug</span>
+                            <span class="tag tag-sm">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/GurkiratSingh3630/SinghAuto" target="_blank" rel="noopener">Code ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="thumbnail thumbnail--soon">
+                        <span>SELECT * FROM advising;</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Student Advising Database</h3>
+                        <p>A relational schema for students, advisors, advising sessions, topics and communication channels, with SQL queries to analyze advising records. I also modelled the same domain in MongoDB to compare relational and document-based access patterns.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-sm">PostgreSQL</span>
+                            <span class="tag tag-sm">SQL</span>
+                            <span class="tag tag-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="thumbnail thumbnail--soon">
+                        <span>Punjab → Delhi ✈</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Laddi Taxi Service</h3>
+                        <p>A responsive, customer-facing booking website for a taxi company running trips between Punjab and Delhi Airport. Customers book rides and schedule appointments themselves, which streamlined daily dispatch.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-sm">HTML</span>
+                            <span class="tag tag-sm">CSS</span>
+                            <span class="tag tag-sm">JavaScript</span>
+                        </div>
+                        <!-- Add the live link if the site is online:
+                        <div class="project-links">
+                            <a href="https://YOUR-LINK" target="_blank" rel="noopener">Live site ↗</a>
+                        </div>
+                        -->
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section reveal" id="experience">
+            <div class="section-label">Experience</div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">Sept 2026 – Present</span>
+                    <div>
+                        <h3>Treasurer</h3>
+                        <p>Applied Computer Science Students' Association (ACSSA), University of Winnipeg</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Volunteer</span>
+                    <div>
+                        <h3>Volunteer Web Developer</h3>
+                        <p>Laddi Taxi Service, India · Built and deployed a responsive ride-booking site with self-service scheduling that streamlined daily dispatch operations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Jun 2022 – Mar 2023</span>
+                    <div>
+                        <h3>Programming Tutor</h3>
+                        <p>CRC Institute, Nawanshahr · Taught C, C++ and C# fundamentals and object-oriented concepts to individuals and groups, and helped students debug their programs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Expected Apr 2027</span>
+                    <div>
+                        <h3>BSc, Applied Computer Science</h3>
+                        <p>University of Winnipeg · Software Design, Advanced Internet Programming, Database Systems, Systems Analysis and Design, Data Structures and Algorithms</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download full CV</a>
+        </section>
+
+        <!-- Ideas -->
+        <section class="section reveal" id="ideas">
+            <div class="section-label">Ideas</div>
+            <p class="section-intro">Things I'm exploring and want to build next.</p>
+
+            <div class="ideas-grid">
+                <div class="idea-card">
+                    <span class="idea-num">01</span>
+                    <h3>Smart study planner</h3>
+                    <p>A web app that turns course outlines into a weekly schedule with reminders.</p>
+                </div>
+                <div class="idea-card">
+                    <span class="idea-num">02</span>
+                    <h3>ACSSA budget tracker</h3>
+                    <p>A small tool to track student-association spending and event budgets in one place.</p>
+                </div>
+                <div class="idea-card">
+                    <span class="idea-num">03</span>
+                    <h3>Singh Auto in TypeScript</h3>
+                    <p>Migrating Singh Auto to TypeScript with automated tests and a CI/CD pipeline.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section reveal" id="contact">
+            <div class="section-label">Contact</div>
+            <h2 class="contact-title">Let's build something together.</h2>
+            <p class="section-intro">I'm open to internships, co-op positions and student developer roles.</p>
+
+            <div class="contact-links">
+                <a href="mailto:gurkiratsingh20004@gmail.com" class="contact-link">
+                    <span>Email</span><span>gurkiratsingh20004@gmail.com ↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/gurkirat-singh-113761306" target="_blank" rel="noopener" class="contact-link">
+                    <span>LinkedIn</span><span>in/gurkirat-singh-113761306 ↗</span>
+                </a>
+                <a href="https://github.com/GurkiratSingh3630" target="_blank" rel="noopener" class="contact-link">
+                    <span>GitHub</span><span>GurkiratSingh3630 ↗</span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Gurkirat Singh · Winnipeg, MB · Built from scratch with HTML, CSS and JavaScript</p>
+            <a href="#top" class="back-to-top">Back to top ↑</a>
+        </footer>
+    </main>
+
+</body>
+</html>
